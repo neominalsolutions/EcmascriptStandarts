@@ -4,7 +4,8 @@
 
 export default class HomePage {
 
-  render(){
+  // method
+  render(... args:number[]){
     return `<div>Home Page</div>`
   }
 
