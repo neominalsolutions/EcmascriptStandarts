@@ -14,7 +14,7 @@ showMessage('merhaba');
 // değer döndüren function return ifadesi içerir.
 function sum(number1,number2) {
 
-    if(number1 !== typeof(Number)){
+    if(typeof(number1) !== typeof(Number)){
       throw new Error('number1 numeric değil')
     }
 
