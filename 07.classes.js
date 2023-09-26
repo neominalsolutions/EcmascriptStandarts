@@ -67,13 +67,10 @@ console.log('c',cat1.getAge());
 function Animal(name) {
   this.name = name
 
-   function getName () {
-      return this.name.trim();
-  }
+  this.getName = function () {
+    return this.name.trim();
+  } 
 
-  return {
-    getName
-  }
 }
 
 // Object literal
@@ -93,7 +90,12 @@ console.log('rabbit', rabbit);
 // hayvan protosundan kedi objesi oluştur.
 // Cat.prototype = Animal.prototype;
 
+
+Cat.__proto__ = Animal;
+
 const c2 = new Cat('kedi5')
+
+
 // c2.getName();
 console.log('c2', c2);
 
@@ -120,6 +122,9 @@ class Person2 {
     return "";
   }
 }
+
+
+
 // ES6 da class yapısı ortaya çıktı
 // ReactJS de ReactTS de class yapısını destekliyor.
 // bir sınıf başka bir sınıfa kalıtım vermek için extend keyword kullanılır
